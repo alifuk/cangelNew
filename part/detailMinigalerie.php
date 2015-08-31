@@ -1,0 +1,2 @@
+<img src='./img/small/<?php echo $fotoN; ?>' style="margin: 10px ; max-width: 100px; min-width: 20px;  left: 0;  position: static;  display: inline-block; transform: translate( 0%, 0%);" onclick="vymenFotky('<?php echo $fotoN; ?>')"    data='<?php echo $fotoN; ?>'               >
+                    

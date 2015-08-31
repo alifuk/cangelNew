@@ -1,0 +1,53 @@
+
+
+#hotovo zmenšit ikonky vpravo dole
+#hotovo kontakt písmo na střed
+#hotovo kariera na střed
+
+#hotovo opravit odkaz ze sliderů
+#hotovo detail scrollovatelnost textovýho sloupce
+
+#hotovo font open sans
+#snad všude hotovo bílý texty se stínem
+
+------------------------------- 24.8.2015
+
+#hotovo | slider prodloužen timer
+#hotovo | slider text shaddow
+#hotovo | slider buttons
+#hotovo | obrázek druhej slider
+#hotovo | kariéra - nadpis, vycentrování
+#hotovo | onás - nadpis, vycentrování
+#hotovo | novinka screen - dána oslavná fotka, každý vidí stránku na které je, navíc se to špatně screenuje a je to divný mít screen stránky na který sem....s
+#hotovo | tlačítka border
+#hotovo | top-logo animation
+
+přeloženo > výpis produktů - kompletně změnit
+přeloženo > menu - obchody - coming soon
+
+------------------------------- 24.8.2015 - 18:02
+
+#hotovo | detail neobsahuje podkategorii
+#hotovo | výpis produktů - kompletně změnit
+#hotovo | menu - obchody - coming soon
+
+-------------------------------
+
+
+
+favicon
+-optional- apple-touch-icon velikosti
+-optional- images velikosti
+
+-optional- použít local storage nějak inteligentně
+zvětšování textu podle rozlišení
+
+loading bar
+posuvník novinky/reference aby měl animaci když se přesune aby to bylo plynulý
+
+
+
+?- funguje na klávesy, kolečko ještě musim dodělat - novinky/reference aby to fungovalo na kolečko
+
+
+

@@ -1,0 +1,868 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+
+
+
+    overflow: hidden; 
+    /* margin-bottom: 70px; */
+}
+
+
+.background-contain{
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.background-cover{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.left{
+    float: left;
+}
+
+.t2{
+    font-size: 30px;
+}
+
+
+
+.rotate {
+    -webkit-transform: rotateY(90deg) translateY(0px); /* Safari */
+    transform: rotateY(90deg) translateY(0px);
+    transform-origin: 100% 50%;
+    opacity: 0;
+}
+
+.vcenter-outer{
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.vcenter-middle{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.vcenter-inner{
+    margin-left: auto;
+    margin-right: auto; 
+    /* width: 400px; YOU MUST SET WIDTH MANUALLY*/
+}
+
+@keyframes pulse  /* Safari and Chrome */{
+    0% {transform:scale(1)}
+    50% {transform:scale(1.1)}
+    100% {transform:scale(1)}
+}
+
+.pulse{
+    animation: pulse 10s ease-in-out 0s infinite;
+}
+.icon-small{
+    height: 82%;
+    cursor: pointer;
+    /* width: 31px; */
+    margin-right: 4px;
+    margin-top: 3px;
+    /* float: left; */
+}
+
+.button-menu{
+    text-align: center;
+    width: 150px;  
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    position: relative;
+}
+
+.button-wide{
+    text-align: center;
+    width: 181px;  
+    height: 50px;
+    line-height: 46px;
+    font-size: 18px;
+    font-weight: 800;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.button-medium{
+    text-align: center;
+    width: 83px;  
+    height: 100%;
+    line-height: 30px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.button-border{
+    border-radius: 3px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000;
+}
+
+.border-white{
+    border-color: #FFF;
+}
+
+/* INTRO.php */
+#intro {    
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: table;
+    background-color: #FFF;
+    z-index: 71;
+}
+/* INTRO.php END */
+
+/* container */
+#container{
+    transition-property: transform, opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+/* container END */
+
+/* menu-top.php */
+#menu-top{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
+    z-index: 29;
+    background: rgb(255,255,255); /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-8 */
+
+    -webkit-box-shadow: 0px 2px 14px -2px rgba(0,0,0,0.75); -moz-box-shadow: 0px 2px 14px -2px rgba(0,0,0,0.75); box-shadow: 0px 2px 14px -2px rgba(0,0,0,0.75);
+}
+
+#header-logo{
+    background-image: url(../img/intro-logo.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 119px;
+
+    margin-left: 30px;
+    margin-top: 1px;
+    height: 48px;
+    position: absolute;
+    cursor: pointer;
+    transition-property: border;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+
+
+    border-left-width: 0px;
+    border-left-style: solid;
+    border-left-color: #000;
+}
+
+#header-logo:hover {
+    border-left-width: 3px;
+}
+
+#menu-top-buttons-container{
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+    display: block;
+    width: 750px;
+    cursor: pointer;
+}
+
+/* menu-top.php END*/
+
+/* menu-bottom.php */
+#menu-bottom{
+    position: fixed;
+
+    bottom: 0;
+    z-index: 21;
+    width: 100%;
+    line-height: 30px;
+    padding: 0 10px;
+    height: 30px;
+
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 4%, rgba(252,252,252,1) 47%, rgba(252,252,252,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(4%, rgba(245,245,245,1)), color-stop(47%, rgba(252,252,252,1)), color-stop(100%, rgba(252,252,252,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 4%, rgba(252,252,252,1) 47%, rgba(252,252,252,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 4%, rgba(252,252,252,1) 47%, rgba(252,252,252,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 4%, rgba(252,252,252,1) 47%, rgba(252,252,252,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 4%, rgba(252,252,252,1) 47%, rgba(252,252,252,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fcfcfc', GradientType=0 );
+    -webkit-box-shadow: 0px -2px 19px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -2px 19px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px -2px 19px -6px rgba(0,0,0,0.75);
+}
+
+
+
+
+.move-top{
+    display: none !important;
+    transition-property: height;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    position: relative;
+    top: -120px;
+    /* margin: 0; */
+    /* display: inline-block; */
+    /* float: left; */
+    background-color: #000;
+    width: 50px;
+    color: #FFF;
+
+}
+
+#language-button:hover .move-top {
+    display: block !important;
+}
+
+/* menu-bottom.php END */
+
+/* container */
+#container {
+    position: relative;
+    /* overflow: scroll; */
+}
+/* container END */
+
+
+/* slider */
+.slider-background{
+
+}
+
+.slider-text{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    top: 14px; 
+    left: 0px;
+    text-align: center;  
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+
+
+
+    text-shadow: 2px 2px 4px rgba(150, 150, 150, 1);
+}
+
+.white{
+    color: #FFF;
+}
+/* slider END */
+
+
+
+/* products.php */
+.produktyBox{
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    position: relative; 
+    cursor: pointer;
+}
+
+.produkt {
+    float: left;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000;
+    opacity: 0.8;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.produkt:hover {
+    opacity: 1;
+
+}
+
+.produkt:hover > .sluzbaText{
+    //width: 15%;
+}
+
+.text-center{
+    position: absolute; /* allows repositioning */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10;
+    /* height: auto; */
+}
+
+.produktText{
+
+
+    height: 25px;
+
+
+
+    text-align: center;
+
+
+
+    font-size: 37px;   
+
+
+    color: #FFF;
+
+
+
+    text-shadow: 2px 2px 4px rgba(150, 150, 150, 1);
+
+    /* font-family: Medium; */
+
+}
+
+.hranovane{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.svetla{
+    width: 50%;
+    height: 50%;
+    position: relative;
+}
+
+.produktR{
+    width: 25%;
+    height: 50%;
+    position: relative;
+}
+/* products.php END */
+
+/* product-list.php */
+
+.category-header{
+    width: 100%;
+
+    position: relative;
+    height: 50%;
+}
+
+.product-bar{
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+.product-preview{
+    float: left;
+    height: 300px;
+    width: 200px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.product-preview-inner{
+    height: 100%; 
+    width:100%;
+    position: relative;
+}
+
+.product-preview-inner h4{
+    height: 25px;
+
+    text-align: center;
+    font-size: 25px;
+    color: #FFF;
+
+    text-shadow: 2px 2px 4px rgba(150, 150, 150, 1);
+}
+
+
+/* product-list.php END*/
+
+
+
+
+
+
+
+
+
+
+
+/* detail */
+.separator{
+    max-height: 30px;
+}
+
+.detail{
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    clear: both;    
+    position: relative;
+
+}
+
+
+
+
+.kurvaZasrana{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 65%; 
+    float: left; 
+    height: 100%; 
+    position: absolute; 
+    overflow: hidden;
+}
+
+.detail h4{
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.detailObsah{
+    text-align: center;
+    width: 35%;
+    min-width: 400px;
+    height: 100%;
+    //background-color: #FFF;
+    /* padding: 0px 20px 0 20px; */
+    z-index: 5;
+    position: relative;  
+    -webkit-transition:  1s; /* Safari */
+    transition:  1s;
+    transition-property: background-color;
+    cursor: pointer;
+    float: right; 
+    background-color: #FFF;
+    overflow: auto;
+}
+
+@media screen and (max-height: 1000px) {
+    .detailObsah{
+    }
+}
+
+.detailObsah:hover {
+    //width: 50%;    
+    background-color: #f5f5f5;
+}
+.detail img:hover + .detailObsah{
+    //width: 50%;
+    //background-color: #EDEDED;
+}
+
+.detailVypln{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    top:0px;
+    left:0;
+
+    //z-index: -37;
+    -webkit-transform: rotateX(90deg);
+    -ms-transform: rotateX(0deg); 
+    transform: rotateX(90deg);    
+    transition: 0.3s;
+}
+
+
+
+.detail li{
+    color: #000 !important;
+    float: none;
+    width: auto;
+    list-style-type: none;
+}
+
+.detail p{
+    padding: 0 20px;
+    line-height: 26px;
+}
+
+@media screen and (max-height: 700px) {
+    .detailObsah{
+        font-size: 13px;
+    }
+    .detail p{
+        line-height: 20px;
+    }
+}
+
+/* detail END */
+
+/* news.php */
+.novinka{
+    width: 100%;
+    height: 290px;
+    background-color: #FFF;
+    overflow: hidden;
+    clear: both;
+    position: relative;
+    display: table;
+}
+
+.novinka h2{
+    margin-top: 0;
+    font-size: 28px;
+    padding: 0 20px;
+}
+
+.novinka h4{
+    width: 500px;
+    margin: 0 auto;
+    display: block;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+.novinkaObsah{
+    text-align: center;
+    width: 40%;
+    min-width: 400px;
+    height: 100%;
+    background-color: #FFF;
+    //padding-top: 80px;
+    z-index: 20;
+    position: absolute;  
+    -webkit-transition:  0.5s; /* Safari */
+    transition:  0.5s;
+    cursor: pointer;
+    display: table;
+    vertical-align: middle;
+}
+
+.novinka:hover > .novinkaObsah{
+    width: 44%;
+    background-color: #EDEDED;
+}
+
+.novinkaInner{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.reference{
+    width: 100%;
+    height: 100px;
+    background-color: #F00;
+}
+
+.datum {
+    margin-bottom: 0px !important;
+    margin-top: 10px;
+}
+
+.navigation{
+
+}
+
+#navigation-counter{
+    /* padding-left: 5px; */
+    line-height: 34px;
+    text-align: center;
+    background-color: #000;
+    top: -5px;
+    height: 34px;
+    position: relative;
+    color: #FFF;
+    /* transition-duration: 0.5s; */
+    /* transition-property: position; */
+}
+
+.display{
+
+}
+/* news.php END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* http://ianlunn.github.io/Hover/ */
+
+/* Shutter Out Vertical */
+.hvr-shutter-out-vertical {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+}
+
+.hvr-shutter-out-vertical:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-shutter-out-vertical-white:before {
+    background-color: #FFF;
+}
+
+.hvr-shutter-out-vertical:hover, .hvr-shutter-out-vertical:focus, .hvr-shutter-out-vertical:active {
+    color: white;
+}
+
+.hvr-shutter-out-vertical-white:hover, .hvr-shutter-out-vertical-white:focus, .hvr-shutter-out-vertical-white:active {
+    color: rgba(0,0,0,255);
+}
+.hvr-shutter-out-vertical:hover:before, .hvr-shutter-out-vertical:focus:before, .hvr-shutter-out-vertical:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+
+/* Bounce To Bottom */
+.hvr-bounce-to-bottom {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.hvr-bounce-to-bottom:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    //background: #000;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+0,0e0e0e+100;Black+3D */
+    background: rgb(125,126,125); /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdkN2U3ZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZTBlMGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-8 */
+
+}
+.hvr-bounce-to-bottom:hover, .hvr-bounce-to-bottom:focus, .hvr-bounce-to-bottom:active {
+    color: white;
+}
+.hvr-bounce-to-bottom:hover:before, .hvr-bounce-to-bottom:focus:before, .hvr-bounce-to-bottom:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+
+/* Bounce To Top */
+.hvr-bounce-to-top {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.hvr-bounce-to-top:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+0,0e0e0e+100;Black+3D */
+    background: rgb(125,126,125); /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdkN2U3ZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZTBlMGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-8 */
+}
+.hvr-bounce-to-top:hover, .hvr-bounce-to-top:focus, .hvr-bounce-to-top:active {
+    color: white;
+}
+.hvr-bounce-to-top:hover:before, .hvr-bounce-to-top:focus:before, .hvr-bounce-to-top:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+
+
+/* Push */
+@-webkit-keyframes hvr-push {
+    50% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes hvr-push {
+    50% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.hvr-push {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+}
+.hvr-push:hover, .hvr-push:focus, .hvr-push:active {
+    -webkit-animation-name: hvr-push;
+    animation-name: hvr-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
